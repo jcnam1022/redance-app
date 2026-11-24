@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>ReDance 회비 관리</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="./redance_favicon.png" />
@@ -12,23 +12,43 @@
   <meta name="apple-mobile-web-app-title" content="ReDance" />
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #1e3a5f;
+    body {
+      margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      background: #1e3a5f; color: #fff; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
+    .box {
+      background: #fff; color: #0f172a; border-radius: 16px; padding: 24px;
+      max-width: 360px; width: 100%; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    img { width: 84px; height: 84px; border-radius: 18px; margin-bottom: 12px; }
+    h2 { margin: 0 0 8px 0; font-size: 18px; }
+    p { margin: 0 0 18px 0; font-size: 13px; color: #64748b; line-height: 1.5; }
+    a.btn {
+      display: block; background: #1e3a5f; color: #fff; text-decoration: none;
+      padding: 12px; border-radius: 10px; font-weight: 700; font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbzbuESa2ZqIloufslqU0W1Cy0NPB_M1fiS-UodscJNQxh7fGXm8aabT5yDE0Yw_frZL/exec"></iframe>
+  <div class="box" id="guideBox">
+    <img src="./redance_favicon.png" alt="ReDance" />
+    <h2>ReDance 회비 관리</h2>
+    <p>
+      아이폰 사파리 하단 <b>공유(□↑) → 홈 화면에 추가</b>를 누르면<br/>
+      리댄스 아이콘으로 바로 실행됩니다.
+    </p>
+    <a id="openBtn" class="btn" href="#">웹 앱 바로 열기 →</a>
+  </div>
+
+  <script>
+    const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzbuESa2ZqIloufslqU0W1Cy0NPB_M1fiS-UodscJNQxh7fGXm8aabT5yDE0Yw_frZL/exec";
+    document.getElementById("openBtn").href = WEBAPP_URL;
+
+    // 홈 화면 아이콘으로 실행 시 즉시 웹 앱으로 이동
+    if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
+      window.location.replace(WEBAPP_URL);
+    }
+  </script>
 </body>
 </html>
