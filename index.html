@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>ReDance 회비 관리</title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./redance_favicon.png" />
-  <link rel="icon" type="image/png" href="./redance_favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/d/1DxFdq_PN3t9P5FFwR44eDP9plOBZAvY6" />
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1DxFdq_PN3t9P5FFwR44eDP9plOBZAvY6" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="ReDance" />
@@ -21,7 +21,7 @@
       background: #fff; color: #0f172a; border-radius: 16px; padding: 24px;
       max-width: 360px; width: 100%; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-    img { width: 84px; height: 84px; border-radius: 18px; margin-bottom: 12px; }
+    img { width: 84px; height: 84px; border-radius: 18px; margin-bottom: 12px; object-fit: cover; }
     h2 { margin: 0 0 8px 0; font-size: 18px; }
     p { margin: 0 0 18px 0; font-size: 13px; color: #64748b; line-height: 1.5; }
     a.btn {
@@ -31,19 +31,16 @@
   </style>
 </head>
 <body>
-  <div class="box" id="guideBox">
-    <img src="./redance_favicon.png" alt="ReDance" />
+  <div class="box">
+    <img src="https://lh3.googleusercontent.com/d/1DxFdq_PN3t9P5FFwR44eDP9plOBZAvY6" alt="ReDance" />
     <h2>ReDance 회비 관리</h2>
-    <p>
-    </p>
     <a id="openBtn" class="btn" href="#">웹 앱 바로 열기 →</a>
   </div>
 
   <script>
-    const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzbuESa2ZqIloufslqU0W1Cy0NPB_M1fiS-UodscJNQxh7fGXm8aabT5yDE0Yw_frZL/exec";
+    const WEBAPP_URL = "여기에_최신_Apps_Script_웹앱_URL_붙여넣기";
     document.getElementById("openBtn").href = WEBAPP_URL;
 
-    // 홈 화면 아이콘으로 실행 시 즉시 웹 앱으로 이동
     if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
       window.location.replace(WEBAPP_URL);
     }
